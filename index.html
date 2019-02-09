@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Train Scheduler</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Staatliches" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4" align="center">Anytime is Train Time</h1>
+      <p class="lead" align="center">Choo Choo. Chee Chee.</p>
+    </div>
+  </div>
+
+
+  <!-- Table -->
+  <div class="panel panel-defualt">
+    <div class="panel-heading">
+      <h2 class="panel-title">Current Train Schedule</h2>
+    </div>
+    <div class="table-bordered table-responsive text-center">
+        <table class="table" style="border: 1px solid: #24a5e8 !important;">
+        <thead>
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency (min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody id="all-display">
+        </tbody>
+      </table>
+    </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title">Add Train</h2>
+            </div>
+            <div class="panel-body">
+              <form align="center">
+                <div class="form-group">
+                  <label for="train-name">Train Name</label>
+                  <input class="form-control" id="trainName" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="destination">Destination</label>
+                  <input class="form-control" id="destination" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="first-train-time">First Train Time (HH:mm - military time)</label>
+                  <input class="form-control" id="firstTrain" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="train-frequency">Frequency (min)</label>
+                  <input class="form-control" id="interval" type="number">
+                </div>
+                <button class="btn btn-primary" id="addTrain" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+
+
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="assets/js/logic.js"></script>
+</body>
